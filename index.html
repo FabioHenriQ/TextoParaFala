@@ -4,17 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./src/scripts/main.js" defer></script>
+    <link rel="shortcut icon" href="./src/assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./src/styles/reset.css">
     <link rel="stylesheet" href="./src/styles/main.css">
     <title>Eu Falo</title>
 </head>
 <body>
-    <h1>Eu Falo!</h1>
-    <button>Aperte aqui para explicar!</button>
+    <div class="container-tittle">
+        <h1><i><img src="./src/assets/favicon.ico" alt="icone de fala"></i>Eu Falo!</h1>
+        <button class="button">Aperte aqui para explicar!</button>
+        <p>Lembre-se de aumentar o volume!</p>
+    </div>
     <div class="container">
-        <input id="text" type="text" placeholder="Escreva algo aqui...">
-        <input type="button" value="Apagar">
-        <input id="speak" type="submit" value="Falar">
+        <textarea placeholder="Escreva algo aqui..." rows="10" cols="40" maxlength="500"></textarea>
+        <input class="button clear" type="button" value="Apagar">
+        <input class="button speak" id="speak" type="submit" value="Falar">
+        <input class="button stop" type="button" value="Parar de Falar">
     </div>
 </body>
 </html>
