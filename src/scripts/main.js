@@ -21,6 +21,21 @@ document.addEventListener('DOMContentLoaded', () => {
     let botao = document.querySelector("input[type='submit']");
     let campoTexto = document.querySelector("textarea");
 
+    document.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") {
+            e.preventDefault();
+            window.speechSynthesis.cancel();
+            let textoParaFala = campoTexto.value;
+            let utterance = new SpeechSynthesisUtterance(textoParaFala);
+            window.speechSynthesis.speak(utterance);
+
+            botao.classList.add('activate');
+            setTimeout(()=>{
+                botao.classList.remove('activate');
+            },500)
+        }
+      });
+
     botao.addEventListener('click', function(event) {
         event.preventDefault();
         window.speechSynthesis.cancel();

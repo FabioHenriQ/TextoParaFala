@@ -71,7 +71,7 @@ body {
 .clear:hover {
     background: rgba(172, 75, 75, 0.466);
 }
-.speak:hover {
+.speak:hover, .activate {
     background: rgba(75, 172, 83, 0.466);
 }
 .stop:hover {
